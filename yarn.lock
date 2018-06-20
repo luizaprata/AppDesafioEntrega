@@ -434,9 +434,19 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
+"@types/jest@^23.1.1":
+  version "23.1.1"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.1.tgz#c54ab1a5f41aa693c0957222dd10414416d0c87b"
+
 "@types/react-native@^0.55.22":
   version "0.55.22"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.55.22.tgz#14193cc3b2e362e0408a54900855c0111c600caa"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-test-renderer@^16.0.1":
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.0.1.tgz#36ee8c4fe33c61d460ad0e7bc42a2d0ddcc775a1"
   dependencies:
     "@types/react" "*"
 
@@ -4399,6 +4409,10 @@ rc@^1.1.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-addons-test-utils@^15.6.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.6.2.tgz#c12b6efdc2247c10da7b8770d185080a7b047156"
 
 react-clone-referenced-element@^1.0.1:
   version "1.0.1"
