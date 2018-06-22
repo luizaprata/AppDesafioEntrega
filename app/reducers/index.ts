@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import drivers from "./drivers";
+import deliveries from "./deliveries";
 
-export default combineReducers({ drivers });
+export default combineReducers({ deliveries });
