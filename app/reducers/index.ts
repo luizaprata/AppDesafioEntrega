@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import motoristas from "./motoristas";
+import drivers from "./drivers";
 
-export default combineReducers({ motoristas });
+export default combineReducers({ drivers });

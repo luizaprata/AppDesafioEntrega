@@ -1,12 +1,12 @@
-import { CHANGE_MOTORISTA, FIRST_LOAD_MOTORISTAS } from "../actions/motoristas";
+import { CHANGE_DRIVER, GET_INITIAL_DELIVERIES } from "../actions/drivers";
 
 const initialState = {};
 
 export default (state = initialState, action:any) => {
   switch (action.type) {
-    case CHANGE_MOTORISTA:
+    case CHANGE_DRIVER:
       return { ...state };
-    case FIRST_LOAD_MOTORISTAS:
+    case GET_INITIAL_DELIVERIES:
       return { ...state };
     default:
       return state;
