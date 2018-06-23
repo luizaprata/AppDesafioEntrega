@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Mapbox from '@mapbox/react-native-mapbox-gl';
 
-Mapbox.setAccessToken('pk.eyJ1IjoibHVpemFwcmF0YSIsImEiOiJjamlya2ZubXAxNzJ6M3Z0OWNrNTBhMDZuIn0.d2VM63UVcbvY6UdDbX5jEA');
+Mapbox.setAccessToken('pk.eyJ1IjoibHVpemFwcmF0YSIsImEiOiJjamlxbjcwNzAwNTExM2xvMXBhNzRvNjFjIn0.92NqSDuUIiD86ptqmd3mNw');
 
 export default class MapContainer extends Component<{}> {
 
@@ -38,6 +38,7 @@ export default class MapContainer extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "blue"
   },
   annotationContainer: {
     width: 30,
