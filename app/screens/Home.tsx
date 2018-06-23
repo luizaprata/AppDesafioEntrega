@@ -31,9 +31,7 @@ class Home extends Component {
       <Container>
         <StatusBar backgroundColor="blue" barStyle="light-content" />
         <KeyboardAvoidingView behavior="padding">
-          <View>
-            <MapContainer deliveries={this.props.deliveries} />
-          </View>
+          <MapContainer />
         </KeyboardAvoidingView>
       </Container>
     );

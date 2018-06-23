@@ -1,5 +1,4 @@
 # Requirements
-To run  this project, you should have installed:
 - brew
 - yarn
 - node
@@ -9,30 +8,20 @@ To run  this project, you should have installed:
 - cocoapods
 - android studio
 
+# Getting started
+- Duplicar arquivo `./.env/.env.production` e renomear para `./.env/.env.development`
+
 ## Android
-- Once you have a device/emulator running, open the terminal and type `adb devices` to see a list of available devices
+- Quando tiver device/emulator rodando, consulte a lista `adb devices` 
 - Run `adb -s <emulator/device name> reverse tcp:8081 tcp:8081`
-- Directly by command line: `react-native run-android`
+- Run `react-native run-android`
+- Se precisar rodar o `.\gradlew clean` comentar a linha `apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"` (script tenta acessar as variaveis de ambiente fora do projeto) em `app:build.gradle` e depois da limpeza descomentar
 
-## iOS
-- On the `/ios` folder, run `pod install`
-
-### On Xcode
-- Run (double click) on the `Estabelecimentos.xcworkspace` file
-- And then, just run the project
-
-### On command line
-- Go to the project root folder: `cd ..`
-- Run `react-native run-ios`
-
-# How to run the tests?
-Currently we have a linter, unit and integration tests
-
+# Tests
 You can run the linter with:
 ```shell
 yarn linter
 ```
-
 You can run all the tests with:
 ```shell
 yarn test
