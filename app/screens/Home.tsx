@@ -5,6 +5,7 @@ import { StatusBar, KeyboardAvoidingView, Text, View } from "react-native";
 import Container from "../components/container/Container";
 import { getInitialDeliveries } from "../actions/deliveries";
 import { connectAlert } from "../components/Alert";
+import { MapContainer } from '../components/MapContainer';
 
 class Home extends Component {
   static propTypes = {
@@ -19,7 +20,7 @@ class Home extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps',nextProps, nextProps.error)
+    console.log("componentWillReceiveProps", nextProps, nextProps.error);
     if (nextProps.error && !this.props.error) {
       this.props.alertWithType("error", "Error", nextProps.error);
     }
@@ -31,7 +32,7 @@ class Home extends Component {
         <StatusBar backgroundColor="blue" barStyle="light-content" />
         <KeyboardAvoidingView behavior="padding">
           <View>
-            <Text>dssdsd</Text>
+            <MapContainer deliveries={this.props.deliveries} />
           </View>
         </KeyboardAvoidingView>
       </Container>
@@ -41,10 +42,10 @@ class Home extends Component {
 
 const mapStateToProps = (state: any) => {
   const deliveries = state.deliveries;
-    return {
-      deliveries,
-      error: deliveries.error,
-    };
+  return {
+    deliveries,
+    error: deliveries.error
+  };
 };
 
 export default connect(mapStateToProps)(connectAlert(Home));
