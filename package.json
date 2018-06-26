@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "linter": "eslint app/** --debug"
   },
   "dependencies": {
     "react": "16.3.1",
-    "react-native": "0.55.4"
+    "react-native": "0.55.4",
+    "react-navigation": "^2.5.2"
   },
   "devDependencies": {
     "@types/jest": "^23.1.1",
@@ -20,6 +22,11 @@
     "@types/redux-logger": "^3.0.6",
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
+    "eslint": "4.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-react": "7.1.0",
     "jest": "23.1.0",
     "react-addons-test-utils": "^15.6.2",
     "react-native-config": "^0.11.5",
@@ -32,7 +39,9 @@
     "redux-saga": "^0.16.0",
     "ts-jest": "^22.4.6",
     "tslib": "^1.9.2",
-    "typescript": "^2.9.2"
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.9.2",
+    "typescript-eslint-parser": "^16.0.0"
   },
   "jest": {
     "preset": "react-native",

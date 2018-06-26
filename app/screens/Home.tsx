@@ -1,27 +1,27 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { StatusBar, KeyboardAvoidingView, Text, View } from "react-native";
-import Container from "../components/container/Container";
-import { getInitialDeliveries } from "../actions/deliveries";
-import { connectAlert } from "../components/Alert";
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { StatusBar, KeyboardAvoidingView, Text, View } from 'react-native'
+import Container from '../components/container/Container'
+import { getInitialDeliveries } from '../actions/deliveries'
+import { connectAlert } from '../components/Alert'
 
 class Home extends Component {
   static propTypes = {
     deliveries: PropTypes.any,
     dispatch: PropTypes.func,
     error: PropTypes.string,
-    alertWithType: PropTypes.func
-  };
+    alertWithType: PropTypes.func,
+  }
 
   componentWillMount() {
-    this.props.dispatch(getInitialDeliveries());
+    this.props.dispatch(getInitialDeliveries())
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps',nextProps, nextProps.error)
+    console.log('componentWillReceiveProps', nextProps, nextProps.error)
     if (nextProps.error && !this.props.error) {
-      this.props.alertWithType("error", "Error", nextProps.error);
+      this.props.alertWithType('error', 'Error', nextProps.error)
     }
   }
 
@@ -35,16 +35,16 @@ class Home extends Component {
           </View>
         </KeyboardAvoidingView>
       </Container>
-    );
+    )
   }
 }
 
 const mapStateToProps = (state: any) => {
-  const deliveries = state.deliveries;
-    return {
-      deliveries,
-      error: deliveries.error,
-    };
-};
+  const deliveries = state.deliveries
+  return {
+    deliveries,
+    error: deliveries.error,
+  }
+}
 
-export default connect(mapStateToProps)(connectAlert(Home));
+export default connect(mapStateToProps)(connectAlert(Home))
