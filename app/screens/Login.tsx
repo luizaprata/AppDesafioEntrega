@@ -28,7 +28,7 @@ class Login extends Component {
               style={{ backgroundColor: '#FFF' }}
             />
             <Button
-              title="Enviar"
+              title="+"
               accessibilityLabel="increment"
               onPress={this.onHandleLogin.bind(this)}
               color="blue"
