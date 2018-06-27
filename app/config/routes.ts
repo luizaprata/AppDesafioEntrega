@@ -1,9 +1,9 @@
-import { StatusBar } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 
 import Home from '../screens/Home'
+import Login from '../screens/Login'
 
-const HomeStack = StackNavigator(
+export default StackNavigator(
   {
     Home: {
       screen: Home,
@@ -12,21 +12,15 @@ const HomeStack = StackNavigator(
         headerTitle: 'Home',
       },
     },
+    Login: {
+      screen: Login,
+      navigationOptions: {
+        title: "Login"
+      }
   },
   {
     headerMode: 'screen',
-  },
+  }
 )
 
-export default StackNavigator(
-  {
-    Home: {
-      screen: HomeStack,
-    },
-  },
-  {
-    mode: 'modal',
-    headerMode: 'none',
-    cardStyle: { paddingTop: StatusBar.currentHeight },
-  },
-)
+
