@@ -1,9 +1,4 @@
-import {
-  CHANGE_DRIVER,
-  GET_INITIAL_DELIVERIES,
-  DELIVERIES_ERROR,
-  DELIVERIES_RESULT,
-} from '../actions/deliveries'
+import { DELIVERIES_ERROR } from '../actions/deliveries'
 
 const initialState = {}
 
