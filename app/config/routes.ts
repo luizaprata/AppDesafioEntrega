@@ -5,21 +5,22 @@ import Login from '../screens/Login'
 
 export default StackNavigator(
   {
-    Home: {
-      screen: Home,
-      navigationOptions: {
-        header: () => null,
-        headerTitle: 'Home',
-      },
-    },
     Login: {
       screen: Login,
       navigationOptions: {
         title: "Login"
       }
+    },
+    Home: {
+      screen: Home,
+      navigationOptions: {
+        headerTitle: 'Home',
+        header: () => null
+      }
+    }
   },
   {
-    headerMode: 'screen',
+    headerMode: "screen"
   }
 )
 

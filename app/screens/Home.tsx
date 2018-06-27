@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { StatusBar, KeyboardAvoidingView, Text, View } from 'react-native'
-import Container from '../components/container/Container'
+import Container from '../components/Container/Container'
 import { getInitialDeliveries } from '../actions/deliveries'
 import { connectAlert } from '../components/Alert'
 
