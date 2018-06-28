@@ -8,7 +8,7 @@ export const getLoginResult = () => ({
 })
 
 export const callLogin = (credential:{}) => ({
-    type: LOGIN_RESULT,
+    type: CALL_LOGIN,
     credential
   })
   

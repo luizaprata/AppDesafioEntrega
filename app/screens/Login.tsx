@@ -12,7 +12,6 @@ import { connect } from 'react-redux'
 import { callLogin } from '../actions/login'
 import { connectAlert } from '../components/Alert'
 
-
 class Login extends Component {
   static propTypes = {
     navigation: PropTypes.object,
@@ -20,15 +19,17 @@ class Login extends Component {
   }
 
   onHandleLogin() {
-    console.log(callLogin)
-    this.props.dispatch(callLogin({}))
-    //this.props.navigation.navigate('Home')
+    this.props.dispatch(
+      callLogin({ login: 'challenge@logbee.com.br', senha: 'challenge' }),
+    )
+    //
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps', nextProps, nextProps.error)
+  componentWillReceiveProps(nextProps: any) {
     if (nextProps.error && !this.props.error) {
       this.props.alertWithType('error', 'Error', nextProps.error)
+    } else if (nextProps.login) {
+      this.props.navigation.navigate('Home')
     }
   }
 
@@ -45,8 +46,7 @@ class Login extends Component {
               style={{ backgroundColor: '#FFF' }}
             />
             <Button
-              title="+"
-              accessibilityLabel="increment"
+              title="Enviar"
               onPress={this.onHandleLogin.bind(this)}
               color="blue"
             />

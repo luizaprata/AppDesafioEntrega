@@ -6,7 +6,7 @@ import Container from '../components/Container/Container'
 import { getInitialDeliveries } from '../actions/deliveries'
 import { connectAlert } from '../components/Alert'
 
-class Home extends Component {
+class Home extends Component<{dispatch:any, alertWithType:any, error:any}> {
   static propTypes = {
     deliveries: PropTypes.any,
     dispatch: PropTypes.func,
@@ -18,7 +18,7 @@ class Home extends Component {
     this.props.dispatch(getInitialDeliveries())
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps:any) {
     console.log('componentWillReceiveProps', nextProps, nextProps.error)
     if (nextProps.error && !this.props.error) {
       this.props.alertWithType('error', 'Error', nextProps.error)
