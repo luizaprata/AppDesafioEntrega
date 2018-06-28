@@ -9,10 +9,27 @@ import {
   KeyboardAvoidingView,
 } from 'react-native'
 import { connect } from 'react-redux'
+import { callLogin } from '../actions/login'
+import { connectAlert } from '../components/Alert'
+
 
 class Login extends Component {
+  static propTypes = {
+    navigation: PropTypes.object,
+    alertWithType: PropTypes.func,
+  }
+
   onHandleLogin() {
-    this.props.navigation.navigate('Home')
+    console.log(callLogin)
+    this.props.dispatch(callLogin({}))
+    //this.props.navigation.navigate('Home')
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('componentWillReceiveProps', nextProps, nextProps.error)
+    if (nextProps.error && !this.props.error) {
+      this.props.alertWithType('error', 'Error', nextProps.error)
+    }
   }
 
   render() {
@@ -38,14 +55,14 @@ class Login extends Component {
       </Container>
     )
   }
+}
 
-  static propTypes = {
-    navigation: PropTypes.object,
+const mapStateToProps = (state: any) => {
+  const login = state.login
+  return {
+    login,
+    error: login.error,
   }
 }
 
-const mapStateToProps = (state) => {
-  return {}
-}
-
-export default connect(mapStateToProps)(Login)
+export default connect(mapStateToProps)(connectAlert(Login))
