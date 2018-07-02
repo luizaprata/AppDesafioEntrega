@@ -37,7 +37,6 @@
     "react/jsx-uses-react": ["error"],
     "react/jsx-uses-vars": ["error"],
     "react/no-danger": ["error"],
-    "react/no-undef": ["warn"],
     "react/no-deprecated": ["error"],
     "react/no-direct-mutation-state": ["error"],
     "react/prefer-es6-class": ["error", "always"],

@@ -1,27 +1,50 @@
 import { StackNavigator } from 'react-navigation'
 
 import Home from '../screens/Home'
+import Options from '../screens/Options'
 import Login from '../screens/Login'
+import { StatusBar } from "react-native";
 
-export default StackNavigator(
+
+const HomeStack = StackNavigator(
   {
-    Login: {
-      screen: Login,
-      navigationOptions: {
-        title: "Login"
-      }
-    },
     Home: {
       screen: Home,
       navigationOptions: {
-        headerTitle: 'Home',
-        header: () => null
-      }
+        header: () => null,
+      },
+    },
+    Options: {
+      screen: Options,
+      navigationOptions: {
+        headerTitle: 'Entregadores',
+      },
+    },
+  },
+  {
+    headerMode: 'screen',
+  },
+)
+
+const LoginStack = StackNavigator({
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      title: 'Login',
+    },
+  },
+})
+
+export default StackNavigator(
+  {
+    Home: {
+      screen: HomeStack
+    },
+    CurrencyList: {
+      screen: LoginStack
     }
   },
   {
-    headerMode: "screen"
-  }
+    headerMode: "none"
+  },
 )
-
-
