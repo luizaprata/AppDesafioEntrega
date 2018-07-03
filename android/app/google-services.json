@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:526899458082:android:a5914820144ea52c",
         "android_client_info": {
-          "package_name": "br.com.ticket.estabelecimento"
+          "package_name": "com.appdesafioentrega"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "526899458082-uo9kkhneuhsg0r400bbku6gjh7090q6p.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "br.com.ticket.estabelecimento",
+            "package_name": "com.appdesafioentrega",
             "certificate_hash": "e0cc61bc65a71c99752e0c8c14b169b2545a0285"
           }
         },
