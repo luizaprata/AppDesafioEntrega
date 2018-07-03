@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "526899458082",
+    "firebase_url": "https://ticket-estabelecimentos.firebaseio.com",
+    "project_id": "ticket-estabelecimentos",
+    "storage_bucket": "ticket-estabelecimentos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526899458082:android:a5914820144ea52c",
+        "android_client_info": {
+          "package_name": "br.com.ticket.estabelecimento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526899458082-uo9kkhneuhsg0r400bbku6gjh7090q6p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ticket.estabelecimento",
+            "certificate_hash": "e0cc61bc65a71c99752e0c8c14b169b2545a0285"
+          }
+        },
+        {
+          "client_id": "526899458082-g6aqag2ag3cvefh838q8rm7hljjtqvof.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiRIz4gGP2iIMoexIjs74iuf7TpHRC4mM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526899458082-gfaa7hquqn7h1nj0b24tbh81ci98hfd9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.edenred.estabelecimento",
+                "app_store_id": "1133948349"
+              }
+            },
+            {
+              "client_id": "526899458082-g6aqag2ag3cvefh838q8rm7hljjtqvof.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
